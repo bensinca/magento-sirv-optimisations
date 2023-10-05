@@ -1,6 +1,9 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
+        <referenceBlock name="sirv-headers" ifconfig="sirv_magento2/general/enabled">
+            <action method="remove" />
+        </referenceBlock>
         <referenceBlock name="head.additional">
             <block ifconfig="oe_sirv/settings/enable_media_preconnect" class="OuterEdge\SirvOptimisations\Block\MediaUrl" name="outeredge.sirv.preconnect" template="OuterEdge_SirvOptimisations::media-preconnect.phtml"/>
         </referenceBlock>
